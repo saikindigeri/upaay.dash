@@ -63,7 +63,7 @@ const Board = () => {
       <div className="w-full md:w-[calc(100%-16rem)] lg:w-[calc(100%-20%)] md:ml-4 lg:ml-8 mt-4 md:mt-0">
         {/* Initial div with header kinda */}
         <div className="w-full flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4">
-          <div className="w-full sm:w-[40%] bg-[#F5F5F5] h-11 flex rounded-md items-center gap-2 p-2">
+          <div className={`w-full sm:w-[40%] ${theme==='light'?'bg-[#F5F5F5] ':'bg-gray-700'} h-11 flex rounded-md items-center gap-2 p-2`}>
             <svg width="20" height="20" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M11.3417 19.25C16.1512 19.25 20.0501 15.3512 20.0501 10.5417C20.0501 5.7322 16.1512 1.83334 11.3417 1.83334C6.53225 1.83334 2.63339 5.7322 2.63339 10.5417C2.63339 15.3512 6.53225 19.25 11.3417 19.25Z"
@@ -85,7 +85,7 @@ const Board = () => {
             </p>
           </div>
           {/* Right side div notifications and metadata */}
-          <div className="w-full sm:w-[40%] bg-white h-11 flex items-center justify-between mt-4 sm:mt-0">
+          <div className={`w-full sm:w-[40%] ${theme==='light'?'bg-white':'bg-gray-900'} h-11 flex items-center justify-between mt-4 sm:mt-0 `}>
             <div className="flex items-center gap-3 sm:gap-4 ml-4 sm:ml-8">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -192,14 +192,14 @@ const Board = () => {
               </svg>
               <button
                 onClick={toggleTheme}
-                className={`px-3 py-1 rounded ${theme === 'light' ? 'bg-gray-200 text-gray-900' : 'bg-gray-700 text-white'}`}
+                className={`px-3 py-1 rounded ${theme === 'light' ? 'bg-white text-[#787486]' : 'bg-gray-900 text-white'}`}
               >
                 <IoToggleOutline className="text-xl" />
               </button>
             </div>
             <div className="flex items-center gap-3 sm:gap-4">
               <div className="space-y-1">
-                <h1 className={`font-inter font-normal text-sm sm:text-base ${theme === 'light' ? 'text-black' : 'text-white'} tracking-normal leading-none`}>
+                <h1 className={`font-inter ml-7 font-normal text-sm sm:text-base ${theme === 'light' ? 'text-black' : 'text-white'} tracking-normal leading-none`}>
                   Palak Jain
                 </h1>
                 <h1 className={`text-sm ${theme === 'light' ? 'text-[#787486]' : 'text-white'} font-normal leading-none tracking-normal`}>

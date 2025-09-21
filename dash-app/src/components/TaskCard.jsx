@@ -17,7 +17,7 @@ const TaskCard = ({ task, section }) => {
   return (
     <div
       className={`p-4 sm:p-6 mb-2 rounded-2xl shadow-md ${
-        theme === 'light' ? 'bg-white' : 'bg-gray-800'
+        theme === 'light' ? 'bg-white' : 'bg-gray-900'
       }`}
     >
       {/* Top container */}
