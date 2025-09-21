@@ -27,7 +27,7 @@ A modern, responsive dashboard application built with React, Tailwind CSS, Redux
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/your-username/dash-app.git
+   git clone (https://github.com/saikindigeri/upaay.dash.git)
    cd dash-app
    npm install --force
    npm run dev
